@@ -13,12 +13,6 @@ A small JS utility for working with Pure.CSS Components Modal.
 
 NOTE: This is an independent project, and is not directly associated with Pure CSS.
 
-### Use from the CDN
-
-```html
-<script src="coming-soon"></script>
-```
-
 ### Install from NPM
 
 ```js
