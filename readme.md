@@ -6,7 +6,6 @@ Pure CSS Components Modal
 [![Build Status](https://travis-ci.org/joe-crick/pure-css-components.svg?branch=master)](https://travis-ci.org/joe-crick/pure-css-components)
 [![GitHub license](https://img.shields.io/github/license/Day8/re-frame.svg)](license.txt) 
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
-[![GitHub Issues](https://img.shields.io/github/issues/joe-crick/responsive-css-accordion.svg)](https://github.com/joe-crick/pure-css-components-modal/issues)
 ![Current Version](https://img.shields.io/badge/version-0.0.1-green.svg)
 
 
