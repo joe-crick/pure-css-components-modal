@@ -15,15 +15,12 @@ module.exports = function Modal(selector) {
 
   return {
 
-    openRadio: openRadio,
-    closedRadio: closedRadio,
-
     isOpen: function isOpen() {
-      return this.openRadio.checked;
+      return openRadio.checked;
     },
 
     isClosed: function isClosed() {
-      return this.closeRadioParent.checked;
+      return closeRadioParent.checked;
     },
 
     toggle: function toggle() {
@@ -35,11 +32,11 @@ module.exports = function Modal(selector) {
     },
 
     show: function show() {
-      this.openRadio.checked = true;
+      openRadio.checked = true;
     },
 
     hide: function hide() {
-      this.closedRadio.checked = true;
+      closedRadio.checked = true;
     }
 
   }
