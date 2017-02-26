@@ -43,4 +43,15 @@ test('Modal ', nest => {
     assert.end();
   });
 
+  nest.test('Toggles a modal', assert => {
+    setUp();
+    const modal = Modal('#test-modal');
+
+    modal.toggle();
+    assert.ok(modal.isOpen(), 'modal should be shown');
+    modal.toggle();
+    assert.ok(modal.isClosed(), 'modal should be hidden');
+    assert.end();
+  });
+
 });

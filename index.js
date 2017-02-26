@@ -1,17 +1,10 @@
-// Relax
-// Slow down
-// Think through it first, plan it, then code
-
-// given a selector, return a modal instance - grab the hidden modal radio by id
-// We need to maintain state, so lets use an object
-// Get Close and Open modal by position
-// Determine the state of the modal
-// Toggle away
-
+/**
+ * @desc Small utility for manipulating a Pure.CSS-Component modal.
+ * @param selector
+ * @returns {{isOpen: isOpen, isClosed: isClosed, toggle: toggle, show: show, hide: hide}}
+ */
 module.exports = function Modal(selector) {
-
-  const doc = document;
-  const openRadio = doc.querySelector(selector);
+  const openRadio = document.querySelector(selector);
   let closeRadio = openRadio.nextElementSibling;
 
   while (closeRadio.className.indexOf('modal-container') < 0) {
@@ -24,11 +17,15 @@ module.exports = function Modal(selector) {
       return openRadio.checked;
     },
 
+    isClosed: function isClosed() {
+      return closeRadio.checked;
+    },
+
     toggle: function toggle() {
       if (this.isOpen()) {
-        closeRadio.checked = true;
+        this.hide();
       } else {
-        openRadio.checked = true;
+        this.show();
       }
     },
 
