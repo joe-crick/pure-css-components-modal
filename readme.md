@@ -25,7 +25,7 @@ npm i purecss-components-modal -S
 
 ## Example
 
-An example HTML model:
+An example HTML Modal:
 
 ```html
 <!-- #login-modal is considered the base node for this modal -->
