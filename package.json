@@ -7,11 +7,15 @@
   "author": "Joe Crick",
   "license": "MIT",
   "scripts": {
-    "test": "node test.js | tap-spec"
+    "build:uglify": ". ./build.sh",
+    "build:test": "node test.js | tap-spec",
+    "build": "npm-run-all build:test build:uglify"
   },
   "devDependencies": {
     "mock-browser": "^0.92.12",
+    "npm-run-all": "^4.0.2",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "uglify-js": "^2.7.5"
   }
 }

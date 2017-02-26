@@ -4,8 +4,8 @@
  * @returns {{isOpen: isOpen, isClosed: isClosed, toggle: toggle, show: show, hide: hide}}
  */
 module.exports = function Modal(selector) {
-  const openRadio = document.querySelector(selector);
-  let closeRadioParent = openRadio.nextElementSibling;
+  var openRadio = document.querySelector(selector);
+  var closeRadioParent = openRadio.nextElementSibling;
 
   while (closeRadioParent.className.indexOf('modal-container') < 0) {
     closeRadioParent = closeRadioParent.nextElementSibling;
@@ -20,7 +20,7 @@ module.exports = function Modal(selector) {
     },
 
     isClosed: function isClosed() {
-      return closeRadioParent.checked;
+      return closedRadio.checked;
     },
 
     toggle: function toggle() {
