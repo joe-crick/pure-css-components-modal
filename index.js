@@ -5,11 +5,13 @@
  */
 module.exports = function Modal(selector) {
   const openRadio = document.querySelector(selector);
-  let closeRadio = openRadio.nextElementSibling;
+  let closeRadioParent = openRadio.nextElementSibling;
 
-  while (closeRadio.className.indexOf('modal-container') < 0) {
-    closeRadio = closeRadio.nextElementSibling;
+  while (closeRadioParent.className.indexOf('modal-container') < 0) {
+    closeRadioParent = closeRadioParent.nextElementSibling;
   }
+
+  const closedRadio = closeRadioParent.querySelector('.close-modal');
 
   return {
 
@@ -18,7 +20,7 @@ module.exports = function Modal(selector) {
     },
 
     isClosed: function isClosed() {
-      return closeRadio.checked;
+      return closeRadioParent.checked;
     },
 
     toggle: function toggle() {
@@ -34,7 +36,7 @@ module.exports = function Modal(selector) {
     },
 
     hide: function hide() {
-      closeRadio.checked = true;
+      closedRadio.checked = true;
     }
 
   }
