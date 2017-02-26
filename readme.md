@@ -25,10 +25,31 @@ npm i purecss-components-modal -S
 
 ## Example
 
+Given the following modal:
+
+```html
+<!-- #login-modal is considered the base node for this modal -->
+<input type="radio" class="open-modal pcssc-invisible" id="login-modal" name="modal-toggle"/>
+<label for="test-modal" class="pure-button">Open Modal</label>
+<div class="modal-container pcssc-invisible">
+    <div class="modal-frame">
+        <div class="modal-header">
+            Header
+            <input type="radio" id="close-modal" name="modal-toggle" class="close-modal pcssc-invisible"/>
+            <label for="close-modal" class="close-button">x</label>
+        </div>
+        <div class="modal-body">
+            Body
+        </div>
+    </div>
+</div>
+```
+
 ```js
 
 import Modal from 'purecss-components-modal';
 
+// Pass in a selector to the base node for the modal you want to work with
 const loginModal = Modal('#login-modal');
 
 // Show the modal
