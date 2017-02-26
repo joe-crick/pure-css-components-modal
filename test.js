@@ -55,4 +55,24 @@ test('Modal ', nest => {
     assert.end();
   });
 
+  nest.test('Shows open state', assert => {
+    const doc = setUp();
+    const modal = Modal('#test-modal');
+    const modalToggle = doc.querySelector('#test-modal');
+
+    modal.show();
+    assert.ok(modal.isOpen() === modalToggle.checked, 'modal should be shown');
+    assert.end();
+  });
+
+  nest.test('Shows closed state', assert => {
+    const doc = setUp();
+    const modal = Modal('#test-modal');
+    const modalToggle = doc.querySelector('#test-modal');
+
+    modal.hide();
+    assert.ok(modal.isClosed() === !modalToggle.checked, 'modal should be shown');
+    assert.end();
+  });
+
 });
