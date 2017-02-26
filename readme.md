@@ -25,7 +25,7 @@ npm i purecss-components-modal -S
 
 ## Example
 
-Given the following modal:
+An example HTML model:
 
 ```html
 <!-- #login-modal is considered the base node for this modal -->
@@ -44,6 +44,7 @@ Given the following modal:
     </div>
 </div>
 ```
+This JS would work with the Modal defined above: 
 
 ```js
 
