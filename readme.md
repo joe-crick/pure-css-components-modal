@@ -13,6 +13,13 @@ A small JS utility for working with Pure.CSS Components Modal.
 
 NOTE: This is an independent project, and is not directly associated with Pure CSS.
 
+## Summary
+
+Pure.CSS Components is a library of CSS only components designed for use with the Pure.CSS framework. None of the components
+require any JavaScript in order to function. There may be times, however, when it can be useful to have JavaScript to 
+manipulate a component. Therefore, I've created individual JS modules to complement the CSS only components. Don't need
+JS. Don't bother. Need a little JS---use just what you need.
+
 ### Install from NPM
 
 ```js
