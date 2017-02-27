@@ -22,6 +22,10 @@ function setUp() {
   return document;
 }
 
+function tearDown() {
+  document = undefined;
+}
+
 test('Modal ', nest => {
   nest.test('Shows a modal', assert => {
     const doc = setUp();
@@ -31,6 +35,7 @@ test('Modal ', nest => {
     modal.show();
     assert.ok(modalToggle.checked, 'modal should show');
     assert.end();
+    tearDown();
   });
 
   nest.test('Hides a modal', assert => {
@@ -41,6 +46,7 @@ test('Modal ', nest => {
     modal.hide();
     assert.ok(!modalToggle.checked, 'modal should be hidden');
     assert.end();
+    tearDown();
   });
 
   nest.test('Toggles a modal', assert => {
@@ -53,6 +59,7 @@ test('Modal ', nest => {
     modal.toggle();
     assert.ok(!modalToggle.checked, 'modal should be hidden');
     assert.end();
+    tearDown();
   });
 
   nest.test('Shows open state', assert => {
@@ -63,6 +70,7 @@ test('Modal ', nest => {
     modal.show();
     assert.ok(modal.isOpen() === modalToggle.checked, 'modal should be shown');
     assert.end();
+    tearDown();
   });
 
   nest.test('Shows closed state', assert => {
@@ -73,6 +81,7 @@ test('Modal ', nest => {
     modal.hide();
     assert.ok(modal.isClosed() === !modalToggle.checked, 'modal should be shown');
     assert.end();
+    tearDown();
   });
 
 });
