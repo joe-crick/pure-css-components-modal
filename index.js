@@ -40,6 +40,6 @@ module.exports = function Modal(selector) {
       closedRadio.checked = true;
     }
 
-  }
+  };
 
 };
