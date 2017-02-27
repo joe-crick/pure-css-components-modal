@@ -1,3 +1,4 @@
+'use strict';
 /**
  * @desc Small utility for manipulating a Pure.CSS-Component modal.
  * @param selector
